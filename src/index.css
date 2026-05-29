@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: #00E599;
+  --bg: #0A0E0D;
+  --text: #E8F0EC;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #0A0E0D;
+  color: #E8F0EC;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: -0.03em;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0,229,153,0.2); border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0,229,153,0.4); }
+
+@keyframes livePulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+.live-dot { animation: livePulse 1.4s ease-in-out infinite; }
+
+@keyframes flashGreen { 0% { background-color: rgba(0,229,153,0.25); } 100% { background-color: transparent; } }
+@keyframes flashRed { 0% { background-color: rgba(255,77,79,0.25); } 100% { background-color: transparent; } }
+.flash-up { animation: flashGreen 0.6s ease-out; }
+.flash-down { animation: flashRed 0.6s ease-out; }
+
+@keyframes gridFade { from { opacity: 0; } to { opacity: 0.4; } }
